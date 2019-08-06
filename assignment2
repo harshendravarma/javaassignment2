@@ -13,7 +13,7 @@ public boolean iscontainsallalpabets(String inputstring) {
 		//this for loop iterates through every character in input string and checks if it is an alphabet or not
 		//if it is an alphabet it changes its value to one
 		for(int i=0;i<inputstring.length();i++) {
-			String alphabet=inputstring.substring(i,i+1);
+			String alphabet=inputstring.substring(i,i+1).toLowerCase();
 	        if(alphabets.containsKey(alphabet)){
 	        	if(alphabets.get(alphabet)==0) {
 	        		alphabets.put(alphabet,1);
