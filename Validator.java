@@ -35,7 +35,7 @@ public class Validator {
 		alphabets.put("s", 0);
 	}
 
-	static public boolean iscontainsallalpabets(String inputstring) {
+	static public boolean isContainsAllAlpabets(String inputstring) {
 		initializehashmap();
 		int sum = 0;
 		// this for loop iterates through every character in input string and checks if
@@ -58,7 +58,7 @@ public class Validator {
 		return false;
 	}
 	public static void main(String[] args) {
-		System.out.println(iscontainsallalpabets("abcdefghijklmnopqrstuvwxyz"));
-		System.out.println(iscontainsallalpabets("abcdefghijklmnopqrstuvwxy"));
+		System.out.println(isContainsAllAlpabets("abcdefghijklmnopqrstuvwxyz"));
+		System.out.println(isContainsAllAlpabets("abcdefghijklmnopqrstuvwxy"));
 	}
 }
