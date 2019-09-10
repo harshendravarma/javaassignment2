@@ -4,9 +4,8 @@ import java.util.HashMap;
 
 public class Validator {
 	static HashMap<String, Integer> alphabets = new HashMap<String, Integer>();
-
-	static public void initializehashmap() {
-		// hash map of all alphabets as keys and their counts as values
+	static public void initializeHashMap() {
+		/* hash map of all alphabets as keys and their counts as values */
 		alphabets.put("a", 0);
 		alphabets.put("b", 0);
 		alphabets.put("c", 0);
@@ -34,21 +33,23 @@ public class Validator {
 		alphabets.put("k", 0);
 		alphabets.put("s", 0);
 	}
-
-	static public boolean isContainsAllAlpabets(String inputstring) {
-		initializehashmap();
+	
+	static public boolean isContainsAllAlpabets(String inputString) {	
+		initializeHashMap();
 		int sum = 0;
-		// this for loop iterates through every character in input string and checks if
-		// it is an alphabet or not if it is an alphabet it changes its value to one
-		for (int i = 0; i < inputstring.length(); i++) {
-			String alphabet = inputstring.substring(i, i + 1).toLowerCase();
+		/*
+		 * this for loop iterates through every character in input string and checks if
+		 * it is an alphabet or not if it is an alphabet it changes its value to one
+		 */
+		for (int i = 0; i < inputString.length(); i++) {
+			String alphabet = inputString.substring(i, i + 1).toLowerCase();
 			if (alphabets.containsKey(alphabet)) {
 				if (alphabets.get(alphabet) == 0) {
 					alphabets.put(alphabet, 1);
 				}
 			}
 		}
-		// check the sum of all the values in hashmap
+		/* check the sum of all the values in hashmap */
 		for (Integer values : alphabets.values()) {
 			sum += values;
 		}
@@ -57,6 +58,7 @@ public class Validator {
 		}
 		return false;
 	}
+	
 	public static void main(String[] args) {
 		System.out.println(isContainsAllAlpabets("abcdefghijklmnopqrstuvwxyz"));
 		System.out.println(isContainsAllAlpabets("abcdefghijklmnopqrstuvwxy"));
